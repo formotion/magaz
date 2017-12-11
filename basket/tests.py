@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+﻿from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from basket.models import notebook
 
@@ -35,3 +35,4 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
+	self.assertEqual( self.user.is_staff = False, self.user.is_superuser = False) //попытка
