@@ -10,13 +10,6 @@ class HomePageTest(TestCase):
         response = c.get('/')
         self.assertEquals(response.status_code, 200)
 
-    # Тест на добавление новой модели нотбука
-    def setUp(self):
-        self.note = notebook.objects.create(model='NewNotebook',
-                                            cost=1,
-                                            amount=2)
-        self.assertEqual(str(self.note), 'NewNotebook')
-
 
 class PostAdminTest(TestCase):
     # Тест на авторизацию НЕ admin'а в админке
@@ -35,4 +28,3 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
-	self.assertEqual( self.user.is_staff = False, self.user.is_superuser = False) //попытка
