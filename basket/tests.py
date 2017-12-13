@@ -2,7 +2,6 @@
 from django.test import TestCase, Client
 from basket.models import notebook
 
-
 class HomePageTest(TestCase):
     # Тест на проверку работоспособности домашней страницы
     def test_homepage_available(self):
@@ -35,3 +34,4 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
+	self.assertEqual(str(self.username), 'New')
