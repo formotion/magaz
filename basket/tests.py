@@ -43,19 +43,19 @@ class PostAdminTest(TestCase):
         response = c.get('/admin/')
         self.assertEquals(response.status_code, 302)
 
-    def test_na_vhod_NE_admina11(self):
+    def test_na_vhod_NE_admina111(self):
         c = Client()
         c.login(username='test', password='test')
         response = c.get('/admin/')
         self.assertEquals(response.status_code, 302)
 
-    def test_na_vhod_NE_admina11(self):
+    def test_na_vhod_NE_admina1111(self):
         c = Client()
         c.login(username='test', password='test')
         response = c.get('/admin/')
         self.assertEquals(response.status_code, 302)
 
-        def test_na_novogo_usera(self):
+        def test_na_novogo_usera1(self):
         self.username = 'New'
         self.password = 'New'
         self.user = User.objects.create_user\
