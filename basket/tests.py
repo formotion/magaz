@@ -1,6 +1,7 @@
-﻿from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from basket.models import notebook
+
 
 class HomePageTest(TestCase):
     # Тест на проверку работоспособности домашней страницы
@@ -34,4 +35,3 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
-	self.assertEqual(str(self.username), 'New')
