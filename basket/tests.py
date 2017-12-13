@@ -35,3 +35,10 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
+        self.assertEqual(str(self.username), 'New')
+
+    def test_na_vhod_NE_admina11(self):
+        c = Client()
+        c.login(username='test', password='test')
+        response = c.get('/admin/')
+        self.assertEquals(response.status_code, 302)
