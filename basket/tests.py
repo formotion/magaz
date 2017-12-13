@@ -24,10 +24,3 @@ class PostAdminTest(TestCase):
 		c.login(username='test', password='test')
 		response = c.get('/admin/')
 		self.assertEquals(response.status_code, 302)
-
-	# Тест на авторизацию НЕ admin'а в админке
-	def test_na_vhod_NE_admina1(self):
-		c = Client()
-		c.login(username='test', password='test')
-		response = c.get('/admin/')
-		self.assertEquals(response.status_code, 302)
