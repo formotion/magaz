@@ -35,4 +35,5 @@ class PostAdminTest(TestCase):
         self.user.is_staff = False
         self.user.is_superuser = False
         self.user.save()
-   self.assertEqual(str(self.username), 'New')
+
+        self.assertEqual(str(self.username), 'New')
