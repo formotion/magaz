@@ -32,7 +32,7 @@ class HomePageTest(TestCase):
 
 
 class PostAdminTest(TestCase):
-    # Тест на авторизацию НЕ admin'а в админке
+    # Тест на авторизацию незарегистрированного админа
     def test_na_vhod_NE_admina(self):
         c = Client()
         c.login(username='test', password='test')
@@ -50,7 +50,7 @@ class PostAdminTest(TestCase):
         self.user.save()
         self.assertEqual(str(self.username), 'New')
 
-    # Тест на авторизацию клиента в админке
+    # Тест на авторизацию незарегистрированного клиента
     def test_na_vhod_client(self):
         c = Client()
         c.login(username='test', password='test')
