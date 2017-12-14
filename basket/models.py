@@ -18,17 +18,17 @@ class notebook(models.Model):
 
 
 class notebook1(models.Model):
-    model = models.CharField(max_length=100,
+    model1 = models.CharField(max_length=100,
                              verbose_name="Модель ноутбука")
-    cost = models.IntegerField(verbose_name=
+    cost1 = models.IntegerField(verbose_name=
                                "Стоимость ноутбука")
-    amount = models.IntegerField(verbose_name=
+    amount1 = models.IntegerField(verbose_name=
                                  "Количество ноутбуков в наличии")
-    description = models.TextField(verbose_name=
+    description1 = models.TextField(verbose_name=
                                    "Описание ноутбука")
 
     def __str__(self):
-        return self.cost
+        return self.cost1
 
 
 class Otlojit(models.Model):

@@ -21,9 +21,9 @@ class HomePageTest(TestCase):
 
     # Тест на правильное добавление цены для ноутбука
     def setUp1(self):
-        self.note = notebook1.objects.create(model='NewNotebook1',
-                                            cost=10000,
-                                            amount=2)
+        self.note = notebook1.objects.create(model1='NewNotebook',
+                                            cost1=10000,
+                                            amount1=2)
         self.assertEqual(str(self.note), 10000)
 
     # Тест на заказ товара
