@@ -16,10 +16,6 @@ class notebook(models.Model):
     def __str__(self):
         return self.model
 
-    def __str__(self):
-        return self.cost
-
-
 
 class Otlojit(models.Model):
     class Meta():
