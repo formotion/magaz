@@ -22,7 +22,7 @@ class HomePageTest(TestCase):
         self.note = notebook.objects.create(model='NewNotebook1',
                                             cost=10000,
                                             amount=2)
-        self.assertEqual(str(self.note), 10000 )
+        self.assertEqual(str(self.note), 10000)
 
 class PostAdminTest(TestCase):
     # Тест на авторизацию НЕ admin'а в админке
@@ -31,6 +31,7 @@ class PostAdminTest(TestCase):
         c.login(username='test', password='test')
         response = c.get('/admin/')
         self.assertEquals(response.status_code, 302)
+        
 
     # Тест на создание нового пользователя
     def test_na_novogo_usera(self):
@@ -42,6 +43,7 @@ class PostAdminTest(TestCase):
         self.user.is_superuser = False
         self.user.save()
         self.assertEqual(str(self.username), 'New')
+
 
     def test_na_vhod_client(self):
         c = Client()
