@@ -18,12 +18,12 @@ class HomePageTest(TestCase):
                                             amount=2)
         self.assertEqual(str(self.note), 'NewNotebook')
 
-    # Тест на правильное добавление цены для ноутбука
+    # Тест на проверку добавления новой модели ноутбука
     def setUp1(self):
         self.note = notebook.objects.create(model='NewNotebook',
                                             cost=10000,
                                             amount=2)
-        self.assertNotEqual(str(self.note), 10000)
+        self.assertNotEqual(str(self.note), 'Old')
 
     # Тест на заказ товара
     def setUp12(self):
