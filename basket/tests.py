@@ -24,6 +24,12 @@ class HomePageTest(TestCase):
                                             amount=2)
         self.assertEqual(str(self.note), 10000)
 
+    # Тест на заказ товара
+    def setUp(self):
+        self.note = Otlojit.objects.create(konkrnote='NewNotebook',
+                                            konkruser='username')
+        self.assertEqual(str(self.note), 'NewNotebook')
+
 
 class PostAdminTest(TestCase):
     # Тест на авторизацию НЕ admin'а в админке
@@ -44,6 +50,7 @@ class PostAdminTest(TestCase):
         self.user.save()
         self.assertEqual(str(self.username), 'New')
 
+    # Тест на авторизацию клиента в админке
     def test_na_vhod_client(self):
         c = Client()
         c.login(username='test', password='test')

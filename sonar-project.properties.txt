@@ -1,0 +1,7 @@
+sonar.projectKey=runner // путь, по которому будет доступна страничка с результатами тестов в браузере
+sonar.projectName=magaz // имя проекта
+sonar.projectVersion=1.0 // версия проверки
+sonar.sources=admin, basket, loginsys, Magaz1, moiadmin, Registration // папки, которые будут проверяться(можно перечислить через запятую)
+sonar.language=python // язык программирования 
+sonar.dynamicAnalysis=false // включение\отключение функций, отвечающих на юнит тестирование
+sonar.sourceEncoding=UTF-8 // кодировка файлов 
