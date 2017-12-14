@@ -26,8 +26,8 @@ class HomePageTest(TestCase):
 
     # Тест на заказ товара
     def setUp(self):
-        self.note = Otlojit.objects.create(konkrnote='NewNotebook')
-        self.assertEqual(str(self.note), 'NewNotebook')
+        self.note = Otlojit.objects.create(user='UserName')
+        self.assertEqual(str(self.note), 'UserName')
 
 
 class PostAdminTest(TestCase):
