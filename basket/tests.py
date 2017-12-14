@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from basket.models import notebook
+from basket.models import notebook1
 from basket.models import Otlojit
 
 
@@ -20,7 +21,7 @@ class HomePageTest(TestCase):
 
     # Тест на правильное добавление цены для ноутбука
     def setUp1(self):
-        self.note = notebook.objects.create(model='NewNotebook1',
+        self.note = notebook1.objects.create(model='NewNotebook1',
                                             cost=10000,
                                             amount=2)
         self.assertEqual(str(self.note), 10000)
