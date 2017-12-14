@@ -16,19 +16,9 @@ class notebook(models.Model):
     def __str__(self):
         return self.model
 
-
-class notebook1(models.Model):
-    model1 = models.CharField(max_length=100,
-                             verbose_name="Модель ноутбука")
-    cost1 = models.IntegerField(verbose_name=
-                               "Стоимость ноутбука")
-    amount1 = models.IntegerField(verbose_name=
-                                 "Количество ноутбуков в наличии")
-    description1 = models.TextField(verbose_name=
-                                   "Описание ноутбука")
-
     def __str__(self):
-        return self.cost1
+        return self.cost
+
 
 
 class Otlojit(models.Model):
