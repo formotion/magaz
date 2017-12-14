@@ -17,12 +17,12 @@ class HomePageTest(TestCase):
                                             amount=2)
         self.assertEqual(str(self.note), 'NewNotebook')
 
-    #Тест на правильное добавление цены для ноутбука
+    # Тест на правильное добавление цены для ноутбука
     def setUp1(self):
         self.note = notebook.objects.create(model='NewNotebook1',
                                             cost=10000,
                                             amount=2)
-        self.assertEqual(str(self.note.cost), 10000 )
+        self.assertEqual(str(self.note), 10000 )
 
 class PostAdminTest(TestCase):
     # Тест на авторизацию НЕ admin'а в админке
@@ -48,4 +48,3 @@ class PostAdminTest(TestCase):
         c.login(username='test', password='test')
         response = c.get('/client/')
         self.assertEquals(response.status_code, 302)
-        
