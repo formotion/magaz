@@ -26,7 +26,7 @@ class HomePageTest(TestCase):
         self.assertEqual(str(self.note), 10000)
 
     # Тест на заказ товара
-    def setUp(self):
+    def setUp12(self):
         self.note = Otlojit.objects.create(user='UserName')
         self.assertEqual(str(self.note), 'UserName')
 
