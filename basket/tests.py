@@ -23,7 +23,7 @@ class HomePageTest(TestCase):
         self.note = notebook.objects.create(model='NewNotebook',
                                             cost=10000,
                                             amount=2)
-        self.assertNotEqual(str(self.note), 'Old')
+        self.assertEqual(str(self.note), 'Old')
 
     # Тест на заказ товара
     def setUp12(self):
