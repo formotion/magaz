@@ -4,9 +4,6 @@ from django.db import models
 
 
 class notebook(models.Model):
-    class Meta():
-        db_table = 'notebook'
-
     model = models.CharField(max_length=100,
                              verbose_name="Модель ноутбука")
     cost = models.IntegerField(verbose_name=
