@@ -55,4 +55,4 @@ class PostAdminTest(TestCase):
         c = Client()
         c.login(username='test', password='test')
         response = c.get('/client/')
-        self.assertEquals(response.status_code, 404)
+        self.assertEquals(response.status_code, 403)
