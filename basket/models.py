@@ -12,6 +12,7 @@ class notebook(models.Model):
                                  "Количество ноутбуков в наличии")
     description = models.TextField(max_length=1000,
                              verbose_name="Описание ноутбука")
+
     def __str__(self):
         return self.model
 
@@ -30,5 +31,6 @@ class Otlojit(models.Model):
                             "Пользователь, заказавший ноутбук")
     sostoyanie = models.CharField(default="В обработке",
                                   max_length=100)
+
     def __str__(self):
         return self.user
