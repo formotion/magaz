@@ -1,0 +1,15 @@
+{% extends 'site/base.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Начальная страница</h1>
+    {% if not username %}
+    <h4>Для доступа к сайту вам необходимо пройти аутентификацию.</h4>
+    {% endif %}
+    {% if username %}
+    <h4>Добро пожаловать на сайт {{ username }}</h4>
+    {% endif %}
+{% endblock %}
