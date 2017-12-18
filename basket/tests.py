@@ -4,10 +4,12 @@ from basket.models import notebook
 from basket.models import Otlojit
 
 
-class HomePageTest(TestCase):
-    # Тест на добавление новой модели нотбука
-    def setUp(self):
-        self.note = notebook.objects.create(model='NewNotebook',
-                                            cost=1,
-                                            amount=2)
-        self.assertEqual(str(self.note), 'NewNotebook')
+class PostAdminTest(TestCase):
+    # Тест на создание нового пользователя
+    def ZakaZ(self):
+        self.note = Otlojit.object.create(konkrnote = 3333,
+                                          konkruser = 4444,
+                                          zakax = 5555,
+                                          user = 'testing',
+                                          sostoyanie = 'Заказ обработан')
+        self.assertEquals(str(self.note), 'testing')
