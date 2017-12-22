@@ -2,7 +2,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-
 class notebook(models.Model):
     model = models.CharField(max_length=100,
                              verbose_name="Модель ноутбука")
@@ -15,7 +14,6 @@ class notebook(models.Model):
 
     def __str__(self):
         return self.model
-
 
 class Otlojit(models.Model):
     class Meta():
