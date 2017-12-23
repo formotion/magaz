@@ -1,9 +1,7 @@
-from django.contrib.auth.models import User
-from django.test import TestCase, Client
-from basket.models import notebook
-from basket.models import Otlojit
-
-
+from django.contrib.auth.models import User;
+from django.test import TestCase, Client;
+from basket.models import notebook;
+from basket.models import Otlojit;
 class PostAdminTest(TestCase):
     # Тест на создание нового пользователя
     def ZakaZ(self):
