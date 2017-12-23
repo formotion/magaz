@@ -17,7 +17,7 @@ class notebook(models.Model):
 
 class Otlojit(models.Model):
     class Meta():
-        db_tablet = 'otloj'
+        db_table = 'otloj'
     konkrnote = models.ForeignKey(notebook,
                                   verbose_name="Заказаная модель ноутбука")
     konkruser = models.ForeignKey(User,
