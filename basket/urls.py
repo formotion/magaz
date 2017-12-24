@@ -1,6 +1,6 @@
-from django.conf.urls import url;
+from django.conf.urls import url
 
-__author__ = 'Дмитрий';
+__author__ = 'Дмитрий'
 urlpatterns =
 [
     url(r'^note/(?P<note_id>[0-9]+)/add$',
